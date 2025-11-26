@@ -89,6 +89,7 @@ build_kunlun() (
     vlog "Building Kunlun module"
     cd match/Kunlun
     vlog "Running OpenSSL installer"
+    chmod +x install_openssl.sh    # very scuffed fix for anon repo
     ./install_openssl.sh
     mkdir -p build
     cd build
