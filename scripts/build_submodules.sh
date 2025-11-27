@@ -82,10 +82,6 @@ parse_args() {
 }
 
 build_kunlun() (
-    if [[ -z "$(find match/Kunlun -mindepth 1 -print -quit)" ]]; then
-        vlog "Initializing Kunlun submodule..."
-        git submodule update --init -- match/Kunlun
-    fi
     vlog "Building Kunlun module"
     cd match/Kunlun
     vlog "Running OpenSSL installer"
@@ -100,10 +96,6 @@ build_kunlun() (
 )
 
 build_volepsi() (
-    if [[ -z "$(find match/volepsi -mindepth 1 -print -quit)" ]]; then
-        vlog "Initializing volepsi submodule..."
-        git submodule update --init -- match/volepsi
-    fi
     vlog "Building volepsi module"
     cd match/volepsi
     python3 build.py -DVOLE_PSI_ENABLE_BOOST=ON #--par=1
@@ -111,10 +103,6 @@ build_volepsi() (
 
 
 build_privateid() (
-    if [[ -z "$(find match/Private-ID -mindepth 1 -print -quit)" ]]; then
-        vlog "Initializing Private-ID submodule..."
-        git submodule update --init -- match/Private-ID
-    fi
     vlog "Building Private-ID module"
     cd match/Private-ID
     cargo build --release
