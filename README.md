@@ -71,6 +71,3 @@ Available programs include:
 - `xtabs` - Performs a cross-tabulation. Supports multiple aggregations functions and both 1 and 2 columns to group by.
 
 For more info on a specific program's compilation, use the `--help` flag when compiling.
-
-## About
-This project was developed as part of [Privacy-Preserving Analysis of Misinformation Data](nan) with the goal of demonstrating secure data collaboration using multi-party computation.
